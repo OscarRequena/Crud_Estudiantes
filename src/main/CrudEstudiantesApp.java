@@ -38,8 +38,11 @@ public class CrudEstudiantesApp {
                 switch (opcionMenu){
                     case ALTA_ESTUDIANTE :
                             darAltaEstudiante();
+                            listarEstudiantes();
                         break;
                     case BAJA_ESTUDIANTE:
+                        listarEstudiantes();
+                        darBajaEstudiante();
                         break;
                     case LISTAR_ESTUDIANTE:
                             listarEstudiantes();
@@ -51,6 +54,10 @@ public class CrudEstudiantesApp {
 
         }while (!usuarioQuiereSalir);
 
+    }
+
+    private static void darBajaEstudiante() {
+        bajas.Bajas.darBajaEstudiante();
     }
 
     private static void listarEstudiantes() {

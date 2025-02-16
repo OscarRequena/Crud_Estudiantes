@@ -55,4 +55,8 @@ public class Output {
     public static void finalTabla() {
         System.out.println("------------------------------------------------------------------------------------------------------------------------");
     }
+
+    public static void eligirIdEstudiante() {
+        System.out.println("Ingrese el id del estudiante que desees dar de baja: ");
+    }
 }
