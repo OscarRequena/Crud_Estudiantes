@@ -24,4 +24,8 @@ public class Input {
     public static int recibirNota(){
         return sc.nextInt();
     }
+
+    public static int recibirIdEstudiante() {
+        return sc.nextInt();
+    }
 }
