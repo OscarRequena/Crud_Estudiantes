@@ -19,6 +19,26 @@ public class Estudiante {
         Nota2 = nota2;
     }
 
+    public String getNombreCompleto() {
+        return NombreCompleto;
+    }
+
+    public String getAsignatura1() {
+        return Asignatura1;
+    }
+
+    public int getNota1() {
+        return Nota1;
+    }
+
+    public String getAsignatura2() {
+        return Asignatura2;
+    }
+
+    public int getNota2() {
+        return Nota2;
+    }
+
     public void setNota1(int nota1) {
         Nota1 = nota1;
     }

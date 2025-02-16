@@ -1,6 +1,10 @@
+package main;
+
 import core.model.Estudiante;
 
 import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Map;
 
 public class CrudEstudiantesApp {
     public final static int ALTA_ESTUDIANTE = 1;
@@ -8,12 +12,14 @@ public class CrudEstudiantesApp {
     final static int LISTAR_ESTUDIANTE = 3;
     final static int MODIFICAR_NOTA = 4;
     public final static int SALIR_APLICACION = 5;
-    final static int NUM_ESTUDIANTES = 2;
+    public final static int NUM_ESTUDIANTES = 2;
     private static int opcionMenu;
     public static HashMap<Integer, Estudiante> estudiantes;
-
+    public static Iterator<Map.Entry<Integer, Estudiante>> iterador;
     public static void main(String[] args) {
         estudiantes = new HashMap<>();
+
+
         boolean usuarioQuiereSalir=false;
         do {
             boolean respuestaIncorrecta;
@@ -36,6 +42,7 @@ public class CrudEstudiantesApp {
                     case BAJA_ESTUDIANTE:
                         break;
                     case LISTAR_ESTUDIANTE:
+                            listarEstudiantes();
                         break;
                     case MODIFICAR_NOTA:
                         break;
@@ -46,27 +53,12 @@ public class CrudEstudiantesApp {
 
     }
 
+    private static void listarEstudiantes() {
+        listado.Listado.listarEstudiantes();
+    }
+
     private static void darAltaEstudiante() {
-        for(int i = 0; i < NUM_ESTUDIANTES; i++ ){
-            core.output.Output.ingreseNombreCompleto();
-            String nombreCompleto = core.input.Input.recibirNombreCompleto();
-            core.output.Output.ingreseEdad();
-            int edad = core.input.Input.recibirEdad();
-            core.output.Output.ingreseFechaNacimiento();
-            String fechaNacimiento = core.input.Input.recibirFechaNacimiento();
-            core.output.Output.ingreseAsignatura();
-            String asignatura1 = core.input.Input.recibirAsignatura();
-            core.output.Output.ingreseNota();
-            int nota1 = core.input.Input.recibirNota();
-            core.output.Output.ingreseAsignatura();
-            String asignatura2 = core.input.Input.recibirAsignatura();
-            core.output.Output.ingreseNota();
-            int nota2 = core.input.Input.recibirNota();
-
-            estudiantes.put(i+1, new Estudiante(nombreCompleto,edad,fechaNacimiento,asignatura1,nota1,asignatura2,nota2));
-
-        }
-        core.output.Output.darAltaCorrectamente();
+        altas.Altas.darAltasEstudiantes();
     }
 
     private static boolean validarOpcionMenu() {
