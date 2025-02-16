@@ -48,12 +48,16 @@ public class CrudEstudiantesApp {
                             listarEstudiantes();
                         break;
                     case MODIFICAR_NOTA:
+                        listarEstudiantes();
+                        modificarNotaEstudiante();
                         break;
                 }
             }
-
         }while (!usuarioQuiereSalir);
+    }
 
+    private static void modificarNotaEstudiante() {
+        modificar.Modificar.modificarNotaEstudiante();
     }
 
     private static void darBajaEstudiante() {

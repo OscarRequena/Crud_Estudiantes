@@ -57,6 +57,10 @@ public class Output {
     }
 
     public static void eligirIdEstudiante() {
-        System.out.println("Ingrese el id del estudiante que desees dar de baja: ");
+        System.out.println("Ingrese el id del estudiante: ");
+    }
+
+    public static void ingresarNuevaNota() {
+        System.out.println("Ingrese la nueva nota del estudiante: ");
     }
 }
