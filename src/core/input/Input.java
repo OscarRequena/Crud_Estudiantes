@@ -28,4 +28,8 @@ public class Input {
     public static int recibirIdEstudiante() {
         return sc.nextInt();
     }
+
+    public static int recibirNuevaNota() {
+        return sc.nextInt();
+    }
 }
